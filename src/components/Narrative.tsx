@@ -36,7 +36,7 @@ export default function Narrative() {
     const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <section ref={containerRef} className="relative w-full max-w-4xl mx-auto py-32 px-6">
+        <section ref={containerRef} className="relative w-full max-w-4xl mx-auto py-48 px-6">
             {/* The Vertical Line */}
             <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10">
                 <motion.div

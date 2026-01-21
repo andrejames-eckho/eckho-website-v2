@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 const LOGOS = [
-    "TECHNO", "SOLUTIONS", "NEXUS", "VELOCITY", "QUANTUM", "EDGE", "FLUX", "ORBIT"
+    "ARK PRO", "CORDEN AGRO", "LE CAFE PHILIPPINES", "ROBERTO'S", "ARK PRO", "CORDEN AGRO", "LE CAFE PHILIPPINES", "ROBERTO'S",
 ];
 
 export default function Marquee() {
