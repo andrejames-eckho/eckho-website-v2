@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion';
 import { useEffect } from 'react';
 
 export default function DynamicBackground() {
@@ -12,21 +12,22 @@ export default function DynamicBackground() {
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            mouseX.set(e.clientX - window.innerWidth / 2);
-            mouseY.set(e.clientY - window.innerHeight / 2);
+            mouseX.set(e.clientX);
+            mouseY.set(e.clientY);
         };
 
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, [mouseX, mouseY]);
 
+    const maskImage = useMotionTemplate`radial-gradient(circle at ${springX}px ${springY}px, black 0%, transparent 300px)`;
+
     return (
         <motion.div
             className="fixed inset-0 -z-10 bg-mesh opacity-40 overflow-hidden"
             style={{
-                x: springX,
-                y: springY,
-                scale: 1.1, // Scale up slightly to avoid showing edges when moving
+                maskImage,
+                WebkitMaskImage: maskImage,
             }}
         />
     );
