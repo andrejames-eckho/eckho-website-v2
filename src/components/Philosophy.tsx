@@ -23,27 +23,38 @@ const values = [
 
 export default function Philosophy() {
     return (
-        <section className="w-full max-w-7xl mx-auto py-32 px-6">
-            <div className="text-center mb-16">
-                <h2 className="text-4xl font-black mb-4">Our Technical DNA</h2>
-                <p className="text-white/50">The pillars that define our 'Boutique Tech' approach.</p>
+        <section className="w-full max-w-7xl mx-auto py-48 px-6">
+            <div className="mb-24">
+                <h2 className="text-5xl font-black mb-6 tracking-tighter">Our Technical DNA</h2>
+                <p className="text-white/40 text-lg max-w-xl">The pillars that define our 'Boutique Tech' approach.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {values.map((v, i) => (
                     <motion.div
                         key={i}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: i * 0.1 }}
-                        className="glass-card p-10 rounded-[2rem] text-center group hover:border-eckho-electric/30 transition-all duration-500"
+                        transition={{ duration: 0.8, delay: i * 0.1 }}
+                        className="glass-card !p-12 rounded-[2.5rem] group cursor-pointer relative overflow-hidden flex flex-col items-start"
                     >
-                        <div className="w-16 h-16 rounded-full bg-eckho-electric/10 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
-                            <v.icon className="w-8 h-8 text-eckho-electric" />
+                        <div className="absolute top-0 right-0 w-80 h-80 bg-eckho-electric/5 blur-[120px] group-hover:bg-eckho-electric/20 transition-all duration-700" />
+
+                        <div className="h-full flex flex-col items-start relative z-10 w-full">
+                            <div className="w-16 h-16 rounded-2xl bg-white/5 text-white flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-eckho-electric group-hover:text-black shadow-[0_0_30px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_30px_rgba(0,240,255,0.5)]">
+                                <v.icon className="w-8 h-8" />
+                            </div>
+
+                            <div className="mt-16">
+                                <h3 className="text-4xl font-black mb-4 transition-colors tracking-tighter text-white group-hover:text-eckho-electric">
+                                    {v.title}
+                                </h3>
+                                <p className="text-white/40 text-lg leading-relaxed max-w-[380px]">
+                                    {v.description}
+                                </p>
+                            </div>
                         </div>
-                        <h3 className="text-2xl font-bold mb-4">{v.title}</h3>
-                        <p className="text-white/50 leading-relaxed">{v.description}</p>
                     </motion.div>
                 ))}
             </div>
