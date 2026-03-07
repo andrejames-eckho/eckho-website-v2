@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Magnetic from '@/components/Magnetic';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -17,7 +18,7 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="inline-block px-8 py-3 rounded-full border border-eckho-electric/20 bg-eckho-electric/5 text-eckho-electric text-xs font-bold uppercase tracking-wider mb-4"
+                    className="inline-block px-3 py-1 rounded-full border border-eckho-electric/20 bg-eckho-electric/5 text-eckho-electric text-xs font-bold uppercase tracking-wider mb-4"
                 >
                     Custom Software Development
                 </motion.span>
@@ -35,16 +36,16 @@ export default function Hero() {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <Magnetic>
-                        <button className="group relative px-4 py-1.5 md:py-2 bg-eckho-electric text-black text-sm font-bold rounded-full overflow-hidden transition-transform active:scale-95 shadow-[0_0_40px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.5)]">
+                        <button className="group relative px-3 py-1.5 md:py-2 bg-eckho-electric text-black text-sm font-bold rounded-full overflow-hidden transition-transform active:scale-95 shadow-[0_0_40px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.5)]">
                             <span className="relative z-10 flex items-center gap-2">
                                 Start Call <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                             </span>
                         </button>
                     </Magnetic>
 
-                    <button className="text-white/80 hover:text-white font-medium transition-colors flex items-center gap-2">
+                    <Link href="/services" className="text-white/80 hover:text-white font-medium transition-colors flex items-center gap-2">
                         View Capabilities <div className="w-1.5 h-1.5 rounded-full bg-eckho-violet" />
-                    </button>
+                    </Link>
                 </div>
             </motion.div>
 
