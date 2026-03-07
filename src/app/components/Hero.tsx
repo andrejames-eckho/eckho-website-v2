@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Magnetic from './Magnetic';
+import Magnetic from '@/components/Magnetic';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -17,25 +17,25 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="inline-block px-4 py-1.5 rounded-full border border-eckho-electric/20 bg-eckho-electric/5 text-eckho-electric text-xs font-bold uppercase tracking-wider mb-8"
+                    className="inline-block px-8 py-3 rounded-full border border-eckho-electric/20 bg-eckho-electric/5 text-eckho-electric text-xs font-bold uppercase tracking-wider mb-4"
                 >
                     Custom Software Development
                 </motion.span>
 
-                <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[0.9]">
+                <h1 className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1] md:leading-[0.9]">
                     Engineering the <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-eckho-electric via-eckho-violet to-eckho-electric bg-[length:200%_auto] animate-[gradient_4s_linear_infinite]">
                         Extraordinary
                     </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto leading-relaxed">
                     We build high-performance digital ecosystems that empower category leaders. Human-centric engineering meets technical authority.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <Magnetic>
-                        <button className="group relative px-8 py-4 bg-eckho-electric text-black font-bold rounded-full overflow-hidden transition-transform active:scale-95 shadow-[0_0_40px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.5)]">
+                        <button className="group relative px-4 py-1.5 md:py-2 bg-eckho-electric text-black text-sm font-bold rounded-full overflow-hidden transition-transform active:scale-95 shadow-[0_0_40px_rgba(0,240,255,0.3)] hover:shadow-[0_0_60px_rgba(0,240,255,0.5)]">
                             <span className="relative z-10 flex items-center gap-2">
                                 Start Call <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                             </span>

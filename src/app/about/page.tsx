@@ -1,12 +1,10 @@
-import Navbar from "@/components/Navbar";
-import AboutHero from "@/components/AboutHero";
-import Narrative from "@/components/Narrative";
-import Philosophy from "@/components/Philosophy";
+import AboutHero from "./components/AboutHero";
+import Narrative from "./components/Narrative";
+import Philosophy from "./components/Philosophy";
 
 export default function AboutPage() {
     return (
         <main className="relative flex flex-col items-center overflow-x-hidden">
-            <Navbar />
             <AboutHero />
             <Narrative />
             <Philosophy />

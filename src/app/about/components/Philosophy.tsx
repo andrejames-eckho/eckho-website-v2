@@ -23,10 +23,10 @@ const values = [
 
 export default function Philosophy() {
     return (
-        <section className="w-full max-w-7xl mx-auto py-48 px-6">
+        <section className="w-full max-w-7xl mx-auto py-24 md:py-48 px-6">
             <div className="mb-24">
                 <h2 className="text-5xl font-black mb-6 tracking-tighter">Our Technical DNA</h2>
-                <p className="text-white/40 text-lg max-w-xl">The pillars that define our 'Boutique Tech' approach.</p>
+                <p className="text-white/40 text-lg max-w-xl">The pillars that define our &apos;Boutique Tech&apos; approach.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -37,7 +37,7 @@ export default function Philosophy() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: i * 0.1 }}
-                        className="glass-card !p-12 rounded-[2.5rem] group cursor-pointer relative overflow-hidden flex flex-col items-start"
+                        className="glass-card !p-8 md:!p-12 rounded-[2.5rem] group cursor-pointer relative overflow-hidden flex flex-col items-start"
                     >
                         <div className="absolute top-0 right-0 w-80 h-80 bg-eckho-electric/5 blur-[120px] group-hover:bg-eckho-electric/20 transition-all duration-700" />
 
@@ -47,7 +47,7 @@ export default function Philosophy() {
                             </div>
 
                             <div className="mt-16">
-                                <h3 className="text-4xl font-black mb-4 transition-colors tracking-tighter text-white group-hover:text-eckho-electric">
+                                <h3 className="text-3xl md:text-4xl font-black mb-4 transition-colors tracking-tighter text-white group-hover:text-eckho-electric">
                                     {v.title}
                                 </h3>
                                 <p className="text-white/40 text-lg leading-relaxed max-w-[380px]">

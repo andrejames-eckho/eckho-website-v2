@@ -10,8 +10,8 @@ export default function AboutHero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
-                <h1 className="text-7xl font-black mb-8">The Human Element <br />in <span className="text-eckho-electric">High-Performance</span></h1>
-                <p className="text-xl text-white/50 max-w-2xl mx-auto italic">"Engineering is not just about code; it's about the extraordinary humans who interact with it."</p>
+                <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight md:leading-none">The Human Element <br />in <span className="text-eckho-electric">High-Performance</span></h1>
+                <p className="text-xl text-white/50 max-w-2xl mx-auto italic">&quot;Engineering is not just about code; it&apos;s about the extraordinary humans who interact with it.&quot;</p>
             </motion.div>
         </section>
     );

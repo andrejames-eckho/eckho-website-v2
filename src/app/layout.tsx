@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import DynamicBackground from "@/components/DynamicBackground";
-
+import Navbar from "@/components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,6 +31,7 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <DynamicBackground />
+          <Navbar />
           <div className="relative z-10 min-h-screen">
             {children}
           </div>

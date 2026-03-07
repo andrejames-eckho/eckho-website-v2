@@ -8,7 +8,7 @@ const services = [
         title: "Custom Platforms",
         description: "Enterprise-grade web ecosystems designed for scale and high performance.",
         icon: Monitor,
-        size: "col-span-2 row-span-2",
+        size: "col-span-1 md:col-span-2 row-span-1 md:row-span-2",
         delay: 0.1
     },
     {
@@ -29,17 +29,17 @@ const services = [
         title: "Legacy Refresh",
         description: "Modernizing technical debt into high-authority digital assets.",
         icon: Layers,
-        size: "col-span-2 row-span-1",
+        size: "col-span-1 md:col-span-2 row-span-1",
         delay: 0.4
     }
 ];
 
 export default function Services() {
     return (
-        <section id="services" className="w-full max-w-7xl mx-auto py-48 px-6">
+        <section id="services" className="w-full max-w-7xl mx-auto py-24 md:py-48 px-6">
             <div className="mb-24">
                 <h2 className="text-5xl font-black mb-6 tracking-tighter">Core Capabilities</h2>
-                <p className="text-white/40 text-lg max-w-xl">We don't just build software. We engineer systems that define industries.</p>
+                <p className="text-white/40 text-lg max-w-xl">We don&apos;t just build software. We engineer systems that define industries.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 auto-rows-[360px]">
@@ -50,7 +50,7 @@ export default function Services() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: service.delay }}
-                        className={`${service.size} glass-card !p-12 rounded-[2.5rem] group cursor-pointer relative overflow-hidden flex flex-col`}
+                        className={`${service.size} glass-card !p-8 md:!p-12 rounded-[2.5rem] group cursor-pointer relative overflow-hidden flex flex-col`}
                     >
                         <div className="absolute top-0 right-0 w-80 h-80 bg-eckho-electric/5 blur-[120px] group-hover:bg-eckho-electric/20 transition-all duration-700" />
 
